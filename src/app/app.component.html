@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div id="menu">
+  <p class="title">Menu</p>
+  <ul>
+    <li *ngFor="let sub of items" (click)="onMenu(sub)">
+      {{sub[0]}}
+    </li>
+  </ul>
+</div>
+
+<div class="queue" id="progress">
+  <p class="title">Orders In Progress</p>
+  <div class="inner-content">
+    <ul>
+      <li *ngFor="let item of inProgress">
+        {{item[0]}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="queue" id="done">
+  <p class="title">Finished</p>
+  <div class="inner-content">
+    <ul class="order-list">
+      <li *ngFor="let item of finished">
+        {{item[0]}}
+      </li>
+    </ul>
+  </div>
+</div>
